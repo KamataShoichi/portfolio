@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'] , function (){
+    Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::get('profile/edit', 'Admin\ProfileController@edit');
+});
+
+Route::group(['prefix' => 'user'], function (){
+    Route::get('profile/create', 'User\ProfileController@add');
+    Route::post('profile/create', 'User\ProfileController@create');
+    Route::get('profile/edit', 'User\ProfileController@edit');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
