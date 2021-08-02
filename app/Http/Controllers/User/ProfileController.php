@@ -34,4 +34,6 @@ class ProfileController extends Controller
     public function update () {
         return redirect ('user/profile/edit');
     }
+    
+    
 }

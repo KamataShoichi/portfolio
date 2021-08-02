@@ -146,8 +146,11 @@ return [
     */
 
     'attributes' => [
-        'name' => 'ニックネーム'
-        'birthday' => '生年月日'
+        'name' => 'ニックネーム',
+        'mail' => '、メールアドレス',
+        'birthday' => '生年月日',
+        'gender' => '性別',
+        'favorite_team' => '好きなチーム'
         ],
 
 ];

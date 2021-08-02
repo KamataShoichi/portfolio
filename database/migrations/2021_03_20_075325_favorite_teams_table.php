@@ -13,9 +13,9 @@ class FavoriteTeamsTable extends Migration
      */
     public function up()
     {
-       Schema::create('favorite_team', function (Blueprint $table) {
+       Schema::create('favorite_teams', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('team_name');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class FavoriteTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favorite_team');
+        Schema::dropIfExists('favorite_teams');
     }
 }

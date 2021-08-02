@@ -23,9 +23,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'] , function (){
 Route::group(['prefix' => 'user'], function (){
     Route::get('profile/create', 'User\ProfileController@add');
     Route::post('profile/create', 'User\ProfileController@create');
+    Route::get('profile/create', 'FavoriteTeamController@showList');
     Route::get('profile/edit', 'User\ProfileController@edit');
 });
 
+Route::get('/schedule', 'ScheduleController@index');
 
 Auth::routes();
 
