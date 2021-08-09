@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('birthday');
             $table->integer('gender');
-            $table->bigInteger('favorite_team_id');
+            $table->bigInteger('team_id');
             $table->rememberToken();
             $table->timestamps();
         });

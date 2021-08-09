@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FavoriteTeamsTable extends Migration
+class TeamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class FavoriteTeamsTable extends Migration
      */
     public function up()
     {
-       Schema::create('favorite_teams', function (Blueprint $table) {
+        Schema::create('teams', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('team_id');
+            $table->string('team_name');
+            $table->string('place');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class FavoriteTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favorite_teams');
+        //
     }
 }

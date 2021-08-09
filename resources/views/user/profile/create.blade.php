@@ -53,9 +53,9 @@
                     <div class="form-group row">
                         <label class="col-md-2">好きなチーム</label>
                         <div class="col-md-10">
-                            <select name="favorite_team">
-                              @foreach($favorite_teams as $favorite_team)
-                                <option value="{{$favorite_team->id}}">"{{ $favorite_team->name }}"</option>
+                            <select name="team">
+                              @foreach($teams as $team)
+                                <option value="{{$team->id}}">"{{ $team->team_name }}"</option>
                               @endforeach
                             </select>
                         </div>
